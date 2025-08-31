@@ -40,14 +40,66 @@ track.addEventListener('touchend', e => {
 show(idx);
 
 // Music toggle
-const music = document.getElementById('bg-music');
-const toggle = document.getElementById('music-toggle');
-toggle.addEventListener('click', () => {
+// Elements
+const music = document.getElementById("bg-music");
+const musicVideo = document.getElementById("bg-music-video");
+const toggle = document.getElementById("music-toggle");
+
+// Show button only when music is actually playing
+function showToggle() {
+  toggle.style.display = "inline-flex"; // match CSS flex centering
+}
+
+// Try autoplay immediately (for browsers that allow it)
+function tryPlay() {
+  music.play().then(() => {
+    music.muted = false;
+    toggle.textContent = "🔇"; // playing sound
+    showToggle();
+  }).catch(() => {
+    console.log("Autoplay blocked ❌ waiting for user interaction...");
+    document.body.addEventListener("click", () => {
+      music.play();
+      music.muted = false;
+      toggle.textContent = "🔇";
+      showToggle();
+    }, { once: true });
+  });
+}
+
+// iOS Safari fallback: use hidden video as audio source
+function iosHack() {
+  musicVideo.play().then(() => {
+    music.src = musicVideo.querySelector("source").src;
+    music.play();
+    music.muted = false;
+    toggle.textContent = "🔇";
+    showToggle();
+  }).catch(() => {
+    console.log("iOS video autoplay also blocked, waiting for user...");
+    document.body.addEventListener("click", () => {
+      musicVideo.play();
+      music.src = musicVideo.querySelector("source").src;
+      music.play();
+      music.muted = false;
+      toggle.textContent = "🔇";
+      showToggle();
+    }, { once: true });
+  });
+}
+
+// Run both methods
+tryPlay();
+iosHack();
+
+// Toggle button
+toggle.addEventListener("click", () => {
   if (music.muted) {
     music.muted = false;
-    toggle.textContent = "🔊";
+    music.play();
+    toggle.textContent = "🔇";  // sound ON
   } else {
     music.muted = true;
-    toggle.textContent = "🔇";
+    toggle.textContent = "🔊";  // sound OFF
   }
 });
