@@ -56,11 +56,19 @@
   </div>
 
   <!-- Background Music -->
-  <audio id="bg-music" loop autoplay muted>
-    <source src="music/celebration.mp3" type="audio/mpeg" />
-  </audio>
-  <button id="music-toggle" class="music-btn">🔇</button>
+  <!-- Hidden video (iOS Safari autoplay hack) -->
+<video id="bg-music-video" autoplay loop playsinline muted style="display:none">
+  <source src="music/celebration.mp3" type="audio/mpeg">
+</video>
 
-  <script src="carousel.js"></script>
+<!-- Regular audio (for most browsers) -->
+<audio id="bg-music" loop>
+  <source src="music/celebration.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Floating toggle button (hidden until music starts) -->
+<button id="music-toggle" class="music-btn" style="display:none">🔇</button>
+
+<script src="carousel.js"></script>
 </body>
 </html>
