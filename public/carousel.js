@@ -45,9 +45,9 @@ const toggle = document.getElementById('music-toggle');
 toggle.addEventListener('click', () => {
   if (music.muted) {
     music.muted = false;
-    toggle.textContent = "🔇";
+    toggle.textContent = "🔊";
   } else {
     music.muted = true;
-    toggle.textContent = "🔊";
+    toggle.textContent = "🔇";
   }
 });
