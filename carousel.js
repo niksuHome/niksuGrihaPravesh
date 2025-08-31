@@ -1,3 +1,5 @@
+// Carousel Autoscroll with manual override and pause on hover/touch
+
 const track = document.getElementById('carousel-track');
 const images = Array.from(track.children);
 const leftBtn = document.getElementById('btn-left');
@@ -18,11 +20,17 @@ function prev() {
   show(idx);
 }
 
-// Auto-scroll every 3.5 seconds
-let autoScroll = setInterval(next, 3500);
+// Auto-scroll every 3 seconds
+let autoScroll = setInterval(next, 3000);
 
-track.addEventListener('mouseenter', () => clearInterval(autoScroll));
-track.addEventListener('mouseleave', () => autoScroll = setInterval(next, 3500));
+// Pause auto-scroll on hover/touch
+const pauseAutoscroll = () => clearInterval(autoScroll);
+const resumeAutoscroll = () => autoScroll = setInterval(next, 3000);
+
+track.addEventListener('mouseenter', pauseAutoscroll);
+track.addEventListener('mouseleave', resumeAutoscroll);
+track.addEventListener('touchstart', pauseAutoscroll);
+track.addEventListener('touchend', resumeAutoscroll);
 
 rightBtn.onclick = next;
 leftBtn.onclick = prev;
