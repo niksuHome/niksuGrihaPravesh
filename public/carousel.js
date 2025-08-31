@@ -50,12 +50,23 @@ function showToggle() {
   toggle.style.display = "inline-flex"; // match CSS flex centering
 }
 
+// Start pulsing when music is ON
+function startPulse() {
+  toggle.classList.add("pulsing");
+}
+
+// Stop pulsing when music is muted
+function stopPulse() {
+  toggle.classList.remove("pulsing");
+}
+
 // Try autoplay immediately (for browsers that allow it)
 function tryPlay() {
   music.play().then(() => {
     music.muted = false;
-    toggle.textContent = "🔇"; // playing sound
+    toggle.textContent = "🔇";
     showToggle();
+    startPulse();
   }).catch(() => {
     console.log("Autoplay blocked ❌ waiting for user interaction...");
     document.body.addEventListener("click", () => {
@@ -63,6 +74,7 @@ function tryPlay() {
       music.muted = false;
       toggle.textContent = "🔇";
       showToggle();
+      startPulse();
     }, { once: true });
   });
 }
@@ -75,6 +87,7 @@ function iosHack() {
     music.muted = false;
     toggle.textContent = "🔇";
     showToggle();
+    startPulse();
   }).catch(() => {
     console.log("iOS video autoplay also blocked, waiting for user...");
     document.body.addEventListener("click", () => {
@@ -84,6 +97,7 @@ function iosHack() {
       music.muted = false;
       toggle.textContent = "🔇";
       showToggle();
+      startPulse();
     }, { once: true });
   });
 }
@@ -98,8 +112,10 @@ toggle.addEventListener("click", () => {
     music.muted = false;
     music.play();
     toggle.textContent = "🔇";  // sound ON
+    startPulse();
   } else {
     music.muted = true;
     toggle.textContent = "🔊";  // sound OFF
+    stopPulse();
   }
 });
