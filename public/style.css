@@ -184,13 +184,13 @@ body {
   animation: pulse 1.2s infinite;
 }
 .map-link {
-  color: #FA5053;
+  color: #FC2900;
   font-weight: 700;
   text-decoration: none;
   font-size: 1.1rem;
 }
 .map-link:hover {
-  color: #996515;
+  color: #d58c1d;
   text-decoration: underline;
 }
 
