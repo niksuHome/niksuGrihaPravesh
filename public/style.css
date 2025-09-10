@@ -145,10 +145,10 @@ body {
 }
 .caligraphic {
   font-family: 'Tangerine', cursive;
-  font-size: 4rem;
+  font-size: 3.9rem;
   color: #FC2900;   /* b68d40 - gold accent */
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .music-btn {
   position: fixed;
