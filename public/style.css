@@ -15,7 +15,7 @@ body {
 /* Header */
 .invite-header {
   position: absolute;
-  top: 4vw;
+  top: 2vw;
   width: 100vw;
   text-align: center;
   z-index: 20;
