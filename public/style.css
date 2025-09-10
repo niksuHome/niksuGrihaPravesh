@@ -62,7 +62,7 @@ body {
   z-index: 20;
 }
 .invite-details p {
-  margin: 4px 0;                  /* reduce gap between lines */
+  margin: 3px 0;                  /* reduce gap between lines */
 }
 
 
