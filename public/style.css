@@ -53,7 +53,7 @@ body {
   width: 60%;
   text-align: center;
   font-size: 1rem;                /* slightly smaller text */
-  line-height: 1.4;               /* tighter spacing between lines */
+  line-height: 1.2;               /* tighter spacing between lines */
   background: rgba(255,255,255,0.65);
   backdrop-filter: blur(6px);
   border-radius: 8px;            /* a bit less rounded */
@@ -141,7 +141,7 @@ body {
   .invite-header { top: 2vw; }
   .invite-title { font-size: 1.6rem; }
   .invite-to { font-size: 1rem; }
-  .invite-details { font-size: 0.9rem; padding: 10px; }
+  .invite-details { font-size: 0.8rem; padding: 10px; }
 }
 .caligraphic {
   font-family: 'Tangerine', cursive;
