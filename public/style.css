@@ -211,4 +211,6 @@ body {
 .invite-icon img {
   width: 50px; /* Make the image smaller */
   height: auto; /* Maintain the aspect ratio */
+  vertical-align: middle; /* keeps it aligned with text */
+  display: inline-block;  /* makes it behave neatly */
 }
