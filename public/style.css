@@ -20,10 +20,6 @@ body {
   text-align: center;
   z-index: 20;
 }
-.invite-icon {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
 .invite-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.4rem;
@@ -203,12 +199,14 @@ body {
   50%, 100% { opacity: 0.3; } /* fade instead of harsh blink */
 }
 .invite-icon {
-  position: absolute; /* Places it at the top of the page */
-  top: 10px; /* Adjust the top spacing */
-  left: 50%; /* Center horizontally */
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+
+  position: absolute;      /* Places it at the top of the page */
+  top: 10px;               /* Adjust the top spacing */
+  left: 50%;               /* Center horizontally */
   transform: translateX(-50%); /* Center the image */
-}
-.invite-icon {
+
   width: 24px; 
   height: auto;
   vertical-align: middle;
