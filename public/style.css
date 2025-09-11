@@ -208,7 +208,7 @@ body {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the image */
 }
-.invite-icon img {
+.invite-icon {
   width: 24px; 
   height: auto;
   vertical-align: middle;
