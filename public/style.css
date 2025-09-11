@@ -208,9 +208,9 @@ body {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the image */
 }
-.invite-icon {
-  width: 24px;              /* size similar to emoji */
+.invite-icon img {
+  width: 50px;          /* adjust size */
   height: auto;
-  vertical-align: middle;   /* keeps the image aligned with text */
-  margin-right: 6px;        /* little spacing before "You're Invited!" */
+  display: block;       /* puts it above text */
+  margin: 0 auto 10px;  /* center + space below */
 }
