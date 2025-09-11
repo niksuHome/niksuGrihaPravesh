@@ -209,7 +209,7 @@ body {
   transform: translateX(-50%); /* Center the image */
 }
 .invite-icon img {
-  width: 50px;          /* adjust size */
+  width: 24px;          /* adjust size */
   height: auto;
   display: block;       /* puts it above text */
   margin: 0 auto 10px;  /* center + space below */
