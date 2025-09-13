@@ -24,6 +24,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2.4rem;
   font-weight: 600;
+  margin-top: 1rem;
   margin-bottom: 0.4rem;
   color: #1a1a40; /* deep navy */
 }
