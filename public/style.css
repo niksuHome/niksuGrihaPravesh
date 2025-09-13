@@ -28,7 +28,7 @@ body {
   margin-top: 4rem;
   margin-bottom: 0.4rem;
   color: #1a1a40; /* deep navy */
-  background: rgba(255, 255, 255, 0.6); /* light glass effect */
+  background: rgba(255, 255, 255, 0.2); /* light glass effect */
   display: inline-block;
   padding: 4px 10px;
   border-radius: 6px;
