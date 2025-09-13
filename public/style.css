@@ -202,7 +202,6 @@ body {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
 
-  position: absolute;      /* Places it at the top of the page */
   top: 10px;               /* Adjust the top spacing */
   left: 50%;               /* Center horizontally */
   transform: translateX(-50%); /* Center the image */
