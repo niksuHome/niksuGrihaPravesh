@@ -28,9 +28,11 @@ body {
   margin-top: 4rem;
   margin-bottom: 0.4rem;
   color: #1a1a40; /* deep navy */
-  background: rgba(255, 255, 255, 0.2); /* light glass effect */
-  display: inline-block;
-  padding: 4px 10px;
+}
+.invite-text {
+  background: rgba(255, 255, 255, 0.1);  /* light transparent bg */
+  backdrop-filter: blur(4px);            /* optional glass effect */
+  padding: 4px 12px;
   border-radius: 6px;
 }
 .invite-to {
