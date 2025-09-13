@@ -23,6 +23,7 @@ body {
 .invite-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   font-weight: 600;
   margin-top: 4rem;
   margin-bottom: 0.4rem;
