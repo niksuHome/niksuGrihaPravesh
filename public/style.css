@@ -211,4 +211,5 @@ body {
   height: auto;
   vertical-align: middle;
   margin-right: 6px;
+  display: block;
 }
